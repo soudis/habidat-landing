@@ -5,6 +5,8 @@ RUN apt-get update \
 
 RUN git clone https://github.com/soudis/habidat-landing.git /usr/share/nginx/html
 
+RUN rm -r /usr/share/nginx/html/*
+
 WORKDIR /usr/share/nginx/html
 
 RUN envsubst < index.template.html > index.html
